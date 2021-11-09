@@ -1,0 +1,38 @@
+commit 34c3d9012538c7a99280370874d03749e7dd0f2d
+Author: Emil Amnell <emil.amnell@helsinki.fi>
+Date:   Tue Nov 9 23:48:45 2021 +0200
+
+    muutos taas
+
+ kolmas.txt       | 1 -
+ stuff/kolmas.txt | 3 +++
+ toinen.txt       | 1 +
+ 3 files changed, 4 insertions(+), 1 deletion(-)
+
+commit 4ef5833dc25f7c0de38555aa41037d76db48988a
+Author: Emil Amnell <emil.amnell@helsinki.fi>
+Date:   Tue Nov 9 23:47:23 2021 +0200
+
+    muutos
+
+ kolmas.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 5b1f0b79269fc4988557a778ea5d472107afb928
+Author: Emil Amnell <emil.amnell@helsinki.fi>
+Date:   Tue Nov 9 04:52:57 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 426a34d48f00fe14cd36a26744e18ccaa76bcdfc
+Author: Emil Amnell <emil.amnell@helsinki.fi>
+Date:   Tue Nov 9 04:49:42 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
