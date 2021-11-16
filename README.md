@@ -8,3 +8,9 @@ Linkki komentirivi.txt:iin https://github.com/AmnellEmil/ot-harjoitustyo/blob/ma
 
 
 Linkki gitlog.txt:iin https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt
+
+
+Linkki vaatimusmäärittelyn dokumenttiin: https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/laskarit/viikko1/vaatimusmaarittely.md
+
+
+Linkki työaikakirjanpitoon: https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/laskarit/viikko1/Ty%C3%B6naikakirjanpito.txt
