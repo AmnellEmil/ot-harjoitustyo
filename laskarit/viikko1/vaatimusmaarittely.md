@@ -1,0 +1,3 @@
+# Miinaharavatyyppinen peli
+
+## Miinaharavatyyppinen peli
