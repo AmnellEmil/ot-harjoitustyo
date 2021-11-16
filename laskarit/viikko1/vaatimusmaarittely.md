@@ -1,3 +1,3 @@
-# Miinaharavatyyppinen peli
+# Vaatimusmäärittely
 
 ## Miinaharavatyyppinen peli
