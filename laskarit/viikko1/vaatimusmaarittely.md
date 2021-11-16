@@ -1,3 +1,4 @@
 # Vaatimusmäärittely
 
-## Miinaharavatyyppinen peli
+## Sovelluksen tarkoitus
+Sovellus on miinaharavatyyppinen peli.
