@@ -8,7 +8,7 @@ Created on Tue Nov 23 19:42:40 2021
 import numpy as np
 import random
 
-print("Olen toteuttanut nyt kentän generoinnin miinaharavapelilleni, mutta en saa toimimaan generointia poetryn coverage-report komennolla, koska poetry antaa vaan virheilmoituksia kun yritän lisätä numpyn ja random paketit poetryyn, joita tarvitsen genrointiin. Kuitenkin 'pytest src' toimii kyllä virtuaaliympäristön ulkopuolella.")
+print("Olen toteuttanut nyt kentän generoinnin miinaharavapelilleni")
 
 def add_one(i,j,board):
     if i<0 or j<0 or i==len(board) or j==len(board[0]):
