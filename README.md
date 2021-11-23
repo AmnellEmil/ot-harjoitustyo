@@ -28,3 +28,10 @@ Sovellusta voi testata komennolla:
 ```bash
 pytest src
 ```
+
+### Testikattavuus (jos numpy ja random toimisivat poetryn kautta)
+Testikattavuusraportin voi generoida komennolla:
+```bash
+poetry run invoke coverage-report
+```
+Raportti generoituu _htmlcov_-hakemistoon.
