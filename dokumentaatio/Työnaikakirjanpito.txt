@@ -1,3 +1,5 @@
 Date,Hours,Comment
 16.11,1,vaatimusmäärittelyn tekeminen
+23.11,2,rungon tekeminen
+23.11,3,kentän generointi ja yhden testin kirjoittaminen
 

@@ -2,11 +2,11 @@ from invoke import task
 
 @task
 def start(ctx):
-	ctx.run("python3 src/minesweeper.py")
+	ctx.run("python3 src/Board.py")
 
 @task
 def test(ctx):
-    print("working")
+    ctx.run("pytest src")
 
 @task
 def coverage(ctx):
