@@ -20,7 +20,6 @@ def add_one(i,j,board):
 
 def generate_board(rows,columns,nbombs):
     board=np.zeros((rows,columns),dtype=int)
-#    board=[[0]*columns]*rows
     list_of_locations=[]
     for i in range(len(board)):
         for j in range(len(board[0])):
