@@ -2,5 +2,9 @@ Date,Hours,Comment
 16.11,1,vaatimusmäärittelyn tekeminen
 23.11,2,rungon tekeminen
 23.11,3,kentän generointi ja yhden testin kirjoittaminen
-24.11,1 Testi kentän generoinnille
-
+24.11,1,Testi kentän generoinnille
+25.11,4,Pygamein oppiminen, Pelilaudan logiikan kehittäminen
+26.11,6,Käyttöliittymän kehittäminen, integrointi pelilaudan logiikan kanssa
+27.11,4,Pelin loopin koodaamista
+29.11,2,Pylintin asennus ja testien tekeminen
+29.11,3,Käyttöliittymän parantaminen
