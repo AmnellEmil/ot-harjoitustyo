@@ -24,7 +24,8 @@ class Minefield():
 
     def generate_minefield(self, rows, columns, nbombs):
         self.board = np.zeros((rows, columns), dtype=int)
-        list_of_locations = [(i, j) for i in range(self.board.shape[0]) for j in range(self.board.shape[1])]
+        list_of_locations = [(i, j) for i in range(self.board.shape[0])
+                             for j in range(self.board.shape[1])]
         bomb_locations = random.sample(list_of_locations, nbombs)
         for x in bomb_locations:
             a, b = x
@@ -49,7 +50,8 @@ class Square():
 
     def update_rect(self, color):
         self.surf.fill(color)
-        self.rect = self.surf.get_rect(topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i))
+        self.rect = self.surf.get_rect(
+            topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i))
 
     def flag(self):
         if self.visible:
@@ -59,8 +61,9 @@ class Square():
             self.update_rect("Grey")
         else:
             self.flagged = True
-            self.surf.blit(pg.image.load("images/flag48.png"),(0,0))
-            self.rect = self.surf.get_rect(topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i))
+            self.surf.blit(pg.image.load("images/flag48.png"), (0, 0))
+            self.rect = self.surf.get_rect(
+                topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i))
 
 
 class Board():
@@ -80,18 +83,6 @@ class Board():
             for j in range(self.board.shape[1]):
                 self.board[i][j] = Square(i, j, self.pixels)
                 self.board[i][j].value = self.minefield.board[i][j]
-
-    def flag(self, i, j):
-        if self.board[i][j].visible:
-            return
-        if self.board[i][j].flagged:
-            self.board[i][j].flagged = False
-            self.board[i][j].update_rect("Grey")
-        else:
-            self.board[i][j].flagged = True
-            self.surf.blit(pg.image.load("images/flag48.png"),(0,0))
-            self.rect = self.surf.get_rect(topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i))
-
 
     def reveal(self, i, j):
         if i < 0 or j < 0 or i == self.board.shape[0] or j == self.board.shape[1]:
@@ -116,27 +107,27 @@ class Board():
             for s in row:
                 s.visible = True
                 s.update_rect("White")
-                if s.value==-1:
-                    s.surf.blit(pg.image.load("images/mine48.png"),(0,0))
+                if s.value == -1:
+                    s.surf.blit(pg.image.load("images/mine48.png"), (0, 0))
         self.board[i][j].update_rect("Red")
-        self.board[i][j].surf.blit(pg.image.load("images/mine48.png"),(0,0))
-        
+        self.board[i][j].surf.blit(pg.image.load("images/mine48.png"), (0, 0))
+
     def win(self):
         for row in self.board:
             for s in row:
                 s.visible = True
                 s.update_rect("White")
-                if s.value==-1:
-                    s.surf.blit(pg.image.load("images/mine_defused48.png"),(0,0))
-        
+                if s.value == -1:
+                    s.surf.blit(pg.image.load(
+                        "images/mine_defused48.png"), (0, 0))
+
     def check_win(self):
-        counter=0
+        counter = 0
         for row in self.board:
             for s in row:
-                if not s.visible and s.value!=-1:
-                    counter+=1
-        if counter==0:
+                if not s.visible and s.value != -1:
+                    counter += 1
+        if counter == 0:
             return True
         else:
             return False
-        

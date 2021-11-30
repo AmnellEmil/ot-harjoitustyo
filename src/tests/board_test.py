@@ -7,7 +7,7 @@ Created on Tue Nov 23 19:44:13 2021
 """
 import unittest
 import numpy as np
-from board import Minefield,Square,Board
+from board import Minefield, Square, Board
 
 
 def check_surrounding_bombs(board, i, j):
@@ -29,14 +29,14 @@ def check_surrounding_bombs(board, i, j):
 class TestBoard(unittest.TestCase):
     def setUp(self):
         self.minefield = Minefield()
-        
+
     def test_minefield_init(self):
-        m=Minefield()
-        self.assertEqual(m.board,[])
+        m = Minefield()
+        self.assertEqual(m.board, [])
 
     def test_add_one_works(self):
         self.minefield.board = np.zeros((5, 5), dtype=int)
-        self.minefield.add_one(1,1)
+        self.minefield.add_one(1, 1)
         self.assertEqual(self.minefield.board[1][1], 1)
         self.minefield.board[0][0] = -1
         self.assertEqual(self.minefield.add_one(0, 0), False)
@@ -53,41 +53,18 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(check_surrounding_bombs(board_true, 0, 1), 1)
 
     def test_generate_board_works(self):
-        self.minefield.generate_minefield(6,6,10)
+        self.minefield.generate_minefield(6, 6, 10)
         valid_squares = 0
         for i in range(self.minefield.board.shape[0]):
             for j in range(self.minefield.board.shape[1]):
-                valid_squares += check_surrounding_bombs(self.minefield.board, i, j)
+                valid_squares += check_surrounding_bombs(
+                    self.minefield.board, i, j)
         self.assertEqual(valid_squares, 6*6)
-        
+
     def test_Square_init(self):
-        square=Square(0,0,50)
-        
+        square = Square(0, 0, 50)
+
     def test_Square_update_rect(self):
-        square=Square(0,0,50)
+        square = Square(0, 0, 50)
         square.update_rect("Red")
-        self.assertEqual(square.surf.get_size(),(50,50))
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        self.assertEqual(square.surf.get_size(), (50, 50))
