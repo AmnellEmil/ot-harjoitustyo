@@ -20,18 +20,27 @@ poetry install
 ### Ohjelman käynnistys
 Sovelluksen voi käynnistää komennolla:
 ```bash
-python3 src/Board.py
+poetry run invoke start
 ``` 
 
 ### Testaus
 Sovellusta voi testata komennolla:
 ```bash
-pytest src
+poetry run invoke test
 ```
 
-### Testikattavuus (jos numpy ja random toimisivat poetryn kautta)
+### Testikattavuus 
 Testikattavuusraportin voi generoida komennolla:
 ```bash
 poetry run invoke coverage-report
 ```
 Raportti generoituu _htmlcov_-hakemistoon.
+
+### Pylint
+Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:`
+```bash
+poetry run invoke lint
+```
+
+
+

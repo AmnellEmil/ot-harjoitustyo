@@ -28,7 +28,7 @@ def check_surrounding_bombs(board, i, j):
 
 class TestBoard(unittest.TestCase):
     def setUp(self):
-        self.minefield = Minefield
+        self.minefield = Minefield()
         
     def test_minefield_init(self):
         m=Minefield()
@@ -36,14 +36,14 @@ class TestBoard(unittest.TestCase):
 
     def test_add_one_works(self):
         self.minefield.board = np.zeros((5, 5), dtype=int)
-        self.minefield.add_one(self.minefield,1,1)
+        self.minefield.add_one(1,1)
         self.assertEqual(self.minefield.board[1][1], 1)
         self.minefield.board[0][0] = -1
-        self.assertEqual(self.minefield.add_one(self.minefield,0, 0), False)
-        self.assertEqual(self.minefield.add_one(self.minefield,-1, -1), False)
-        self.assertEqual(self.minefield.add_one(self.minefield,5, 5), False)
-        self.assertEqual(self.minefield.add_one(self.minefield,2, 5), False)
-        self.assertEqual(self.minefield.add_one(self.minefield,2, -1), False)
+        self.assertEqual(self.minefield.add_one(0, 0), False)
+        self.assertEqual(self.minefield.add_one(-1, -1), False)
+        self.assertEqual(self.minefield.add_one(5, 5), False)
+        self.assertEqual(self.minefield.add_one(2, 5), False)
+        self.assertEqual(self.minefield.add_one(2, -1), False)
 
     def test_check_surrounding_bombs_works(self):
         board_false = np.array([[-1, -1], [-1, 2]])
@@ -53,7 +53,7 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(check_surrounding_bombs(board_true, 0, 1), 1)
 
     def test_generate_board_works(self):
-        self.minefield.generate_minefield(self.minefield,6,6,10)
+        self.minefield.generate_minefield(6,6,10)
         valid_squares = 0
         for i in range(self.minefield.board.shape[0]):
             for j in range(self.minefield.board.shape[1]):
