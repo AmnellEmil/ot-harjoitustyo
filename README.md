@@ -7,6 +7,9 @@ https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/vaatimus
 ### Linkki työaikakirjanpitoon: 
 https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/Ty%C3%B6naikakirjanpito.txt
 
+### Linkki arkitektuuriin:
+https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/arkitektuuri.md
+
 ## Ongelmatilanne
 Tarvittujen pakettien asennus ei toimi poetryn kautta. Poetry on kyllä asennettu oikein ja poetryyn on asennettu python3, pytest, invoke ja coverage, mutta en pysty asentamaan poetryyn numpy tai random pakkauksia, joten poetryn invoke kommennot kuten start, test ja coverage-report eivät toimi poetryn virtuaaliympäristössä koska pakkauksia numpy ja random ei löydy. Kuitenkin virtuaaliympäristön ulkopuolella sovelluksen voi käynnistää ja sillä on yksi testi tällä hetkellä.
 
