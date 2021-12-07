@@ -8,3 +8,5 @@ Date,Hours,Comment
 27.11,4,Pelin loopin koodaamista
 29.11,2,Pylintin asennus ja testien tekeminen
 29.11,3,Käyttöliittymän parantaminen
+7.12,1,Testien kirjoittaminen
+7.12,1,Käyttöliittymän parantaminen

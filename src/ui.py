@@ -16,6 +16,7 @@ screen = pg.display.set_mode((1024, 720), pg.RESIZABLE)
 screen.fill("Grey")
 pixels = 48
 font = pg.font.Font(None, pixels)
+pg.display.set_caption("Minesweeper")
 
 
 def draw_text(text, font, color, x, y):
@@ -99,6 +100,12 @@ def main_menu(screen):
     medium_button = Button(screen, "Medium", font, 200, 100, disp_w*(1/6), 325)
     hard_button = Button(screen, "Hard", font, 200, 100, disp_w*(1/6), 450)
     start_button = Button(screen, "Start", font, 200, 100, disp_w*(6/7), 650)
+    rows_plus=Button(screen,"+",font,100,50,disp_w*(4/6),200)
+    rows_minus=Button(screen,"-",font,100,50,disp_w*(5/6),200)
+    cols_plus=Button(screen,"+",font,100,50,disp_w*(4/6),325)
+    cols_minus=Button(screen,"-",font,100,50,disp_w*(5/6),325)
+    bomb_plus=Button(screen,"+",font,100,50,disp_w*(4/6),450)
+    bomb_minus=Button(screen,"-",font,100,50,disp_w*(5/6),450)
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT:
@@ -125,8 +132,21 @@ def main_menu(screen):
                 if medium_button.check_collision():
                     rows, columns, nbombs = 16, 16, 40
                 if hard_button.check_collision():
-                    rows, columns, nbombs = 16, 30, 99
+                    rows, columns, nbombs = 16, 30, 99                 
+                if rows_plus.check_collision():
+                    rows+=1
+                if rows_minus.check_collision():
+                    rows-=1
+                if cols_plus.check_collision():
+                    columns+=1
+                if cols_minus.check_collision():
+                    columns-=1
+                if bomb_plus.check_collision():
+                    nbombs+=1
+                if bomb_minus.check_collision():
+                    nbombs-=1
 
+        rows,columns,nbombs=max(1,rows),max(1,columns),max(0,min(rows*columns,nbombs))
         screen.fill("Grey")
         if main_menu:
             screen.blit(example_surf, (0, 0))
@@ -142,117 +162,35 @@ def main_menu(screen):
         if options_interface:
             start_button.draw()
             start_button.check_hover()
-            draw_text_on_screen(screen, "Presets:", font,
-                                "Black", disp_w*(1/6), 100)
             easy_button.draw()
             easy_button.check_hover()
             medium_button.draw()
             medium_button.check_hover()
             hard_button.draw()
             hard_button.check_hover()
+            rows_plus.draw()
+            rows_plus.check_hover()
+            rows_minus.draw()
+            rows_minus.check_hover()
+            cols_plus.draw()
+            cols_plus.check_hover()
+            cols_minus.draw()
+            cols_minus.check_hover()
+            bomb_plus.draw()
+            bomb_plus.check_hover()
+            bomb_minus.draw()
+            bomb_minus.check_hover()
+            
             draw_text_on_screen(screen, "Manual:", font,
-                                "Black", disp_w/2, 100)
+                                "Black", disp_w*(3/4), 100)
+            draw_text_on_screen(screen, "Presets:", font,
+                                "Black", disp_w*(1/6), 100)
+            draw_text_on_screen(screen, f"Rows: {rows}", font, "Black", disp_w*(3/6)-50, 200)
+            draw_text_on_screen(screen, f"Columns: {columns}", font, "Black", disp_w*(3/6)-50, 325)
+            draw_text_on_screen(screen, f"Bombs: {nbombs}", font, "Black", disp_w*(3/6)-50, 450)
 
         pg.display.update()
         clock.tick(30)
-
-
-def options(screen):
-    running = True
-    disp_w, disp_h = 1024, 720
-    screen = pg.display.set_mode((disp_w, disp_h), pg.RESIZABLE)
-    rows, columns, nbombs = 9, 9, 10
-    easy_s, easy_r = draw_text("Easy", font, "Black", disp_w/4, disp_h/2)
-    medium_s, medium_r = draw_text(
-        "Medium", font, "Black", disp_w/4, disp_h/2+50)
-    hard_s, hard_r = draw_text("Hard", font, "Black", disp_w/4, disp_h/2+100)
-    play_s, play_r = draw_text("Play", font, "Black", disp_w/2, disp_h/2-100)
-    custom_s, custom_r = draw_text(
-        "Custom", font, "Black", disp_w/2, disp_h/2+50)
-    pop_s, pop_r, message_s, message_r = draw_popup(
-        "This message should not be seen")
-    popup_active = False
-    rows_active = False
-    time = 10
-    rows_text = "rows"
-    rows_s, rows_r = draw_text(
-        rows_text, font, "Black", disp_w/4, disp_h*(4/5))
-    while running:
-        for event in pg.event.get():
-            if event.type == pg.QUIT:
-                pg.quit()
-                exit()
-
-            if event.type == pg.KEYDOWN:
-                if event.key == pg.K_ESCAPE:
-                    running = False
-                    screen = pg.display.set_mode((1024, 720), pg.RESIZABLE)
-                if rows_active:
-                    if event.key == pg.K_BACKSPACE:
-                        rows_text = rows_text[:-1]
-                    if event.key == pg.K_RETURN:
-                        rows_active = False
-                        if rows_text.isnumeric():
-                            rows = min(20, int(rows_text))
-                        rows_text = "rows"
-                    else:
-                        key = event.unicode
-                        rows_text += key
-
-            if event.type == pg.MOUSEBUTTONDOWN and event.button == 1:
-                if rows_r.collidepoint(event.pos):
-                    rows_active = True
-                    rows_text = ""
-                else:
-                    if rows_active:
-                        if rows_text.isnumeric():
-                            rows = min(20, int(rows_text))
-                        else:
-                            pop_s, pop_r, message_s, message_r = draw_popup(
-                                "Rows must be an integer")
-                            popup_active = True
-                            time = perf_counter()
-                        rows_text = "rows"
-                        rows_active = False
-                if easy_r.collidepoint(pg.mouse.get_pos()):
-                    rows, columns, nbombs = 9, 9, 10
-                if medium_r.collidepoint(pg.mouse.get_pos()):
-                    rows, columns, nbombs = 16, 16, 40
-                if hard_r.collidepoint(pg.mouse.get_pos()):
-                    rows, columns, nbombs = 16, 30, 99
-                if play_r.collidepoint(pg.mouse.get_pos()):
-                    playing = True
-                    while playing:
-                        playing = minesweeper(screen, rows, columns, nbombs)
-                    time = 10
-
-        info_s, info_r = draw_text(
-            f"Rows: {rows}, Columns: {columns}, Bombs: {nbombs}", font, "Black", disp_w/2, 100)
-        rows_s, rows_r = draw_text(
-            rows_text, font, "Black", disp_w/4, disp_h*(4/5))
-        trows_s, trows_r = draw_text(
-            "Rows", font, "Black", disp_w/4, disp_h*(4/5)-50)
-        screen.fill("Grey")
-        pg.draw.rect(screen, "White", rows_r, 10, 2)
-        pg.draw.rect(screen, "White", rows_r)
-        if rows_active:
-            pg.draw.rect(screen, "Black", rows_r, 1)
-        screen.blit(play_s, play_r)
-        screen.blit(easy_s, easy_r)
-        screen.blit(medium_s, medium_r)
-        screen.blit(hard_s, hard_r)
-        screen.blit(info_s, info_r)
-        #screen.blit(custom_s, custom_r)
-        screen.blit(rows_s, rows_r)
-        screen.blit(trows_s, trows_r)
-        if perf_counter()-time < 2:
-            screen.blit(pop_s, pop_r)
-            screen.blit(message_s, message_r)
-            pg.draw.rect(pop_s, "Black", pop_r, 100, 100)
-
-        pg.display.update()
-        clock.tick(30)
-
 
 def minesweeper(screen, rows, columns, nbombs):
     running = True
@@ -295,11 +233,6 @@ def minesweeper(screen, rows, columns, nbombs):
                     for x in r:
                         if x.rect.collidepoint(pg.mouse.get_pos()):
                             x.flag()
-            # if event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
-             #   for i in range(mine_field.board.shape[0]):
-              #      for j in range(mine_field.board.shape[1]):
-               #         if mine_field.board[i][j].rect.collidepoint(pg.mouse.get_pos()):
-                #            mine_field.flag(i, j)
 
         screen.fill("Black")
         for i in range(mine_field.board.shape[0]):

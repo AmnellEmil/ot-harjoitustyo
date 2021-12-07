@@ -6,11 +6,11 @@ Sovellus on miinaharavatyyppinen peli jota pelataan tietokoneella.
 ## Perustoiminnalisuudet
 ### Sovelluslogiikka 
 - Kentän generointi, pommien satunnainen asettelu ruudukkoon (tehty)
-- voiton/häviön ehdot 
+- voiton/häviön ehdot (tehty)
 - Kentän ruutujen logiikka (tehty)
 ### Käyttöliittymä 
 - Ruutujen, miinojen, numeroiden ja lippujen graaffinen esitys (tehty)
-- valikko jossa voi aloittaa uuden pelin ja valita kentän dimensiot
+- valikko jossa voi aloittaa uuden pelin ja valita kentän dimensiot (tehty)
 - ruutujen liputtaminen ja klikkaaminen (tehty)
 
 ## Kiinostavia kehitysideoita

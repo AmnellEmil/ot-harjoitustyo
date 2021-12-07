@@ -7,6 +7,7 @@ Created on Tue Nov 23 19:44:13 2021
 """
 import unittest
 import numpy as np
+import random
 from board import Minefield, Square, Board
 
 
@@ -29,7 +30,9 @@ def check_surrounding_bombs(board, i, j):
 class TestBoard(unittest.TestCase):
     def setUp(self):
         self.minefield = Minefield()
-
+        self.board=Board(10,10,48,9)
+        self.square = Square(0, 0, 48)
+        
     def test_minefield_init(self):
         m = Minefield()
         self.assertEqual(m.board, [])
@@ -62,9 +65,29 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(valid_squares, 6*6)
 
     def test_Square_init(self):
-        square = Square(0, 0, 50)
+        s = Square(0, 0, 50)
 
     def test_Square_update_rect(self):
-        square = Square(0, 0, 50)
-        square.update_rect("Red")
-        self.assertEqual(square.surf.get_size(), (50, 50))
+        self.square.update_rect("Red")
+        self.assertEqual(self.square.surf.get_size(), (48, 48))
+        
+    def test_Square_flag(self):
+        self.assertEqual(self.square.flagged,False)
+        self.square.flag()
+        self.assertEqual(self.square.flagged,True)
+        self.square.visible=True
+        self.assertEqual(self.square.flag(),None)
+
+    def test_Board_init(self):
+        b=Board(12,12,48,11)
+        
+    def test_Board_generate_board(self):
+        random.seed(1)
+        self.board.generate_board()
+        m=Minefield()
+        random.seed(1)
+        m.generate_minefield(10, 10, 9)
+        for i in range(m.board.shape[0]):
+            for j in range(m.board.shape[1]):
+                self.assertEqual(self.board.board[i][j].value,m.board[i][j])
+       
