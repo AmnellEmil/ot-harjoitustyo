@@ -6,3 +6,4 @@
 ## Sekvenssikaavio
 Linkki sekvenssikaavioon: https://drive.google.com/file/d/1AClS9cngze5Uj5dmY--VjSkwRVRqxAlG/view?usp=sharing
 
+![Alt text](https://drive.google.com/file/d/1AClS9cngze5Uj5dmY--VjSkwRVRqxAlG/view?usp=sharing)
