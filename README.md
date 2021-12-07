@@ -10,6 +10,9 @@ https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/Ty%C3%B6
 ### Linkki arkitektuuriin:
 https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/arkitektuuri.md
 
+### Release:
+https://github.com/AmnellEmil/ot-harjoitustyo/releases/tag/viikko5
+
 ## Asennus
 Riippuvuudet asennetaan komennolla:
 ```bash
@@ -41,6 +44,8 @@ Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla:`
 ```bash
 poetry run invoke lint
 ```
+
+
 
 
 
