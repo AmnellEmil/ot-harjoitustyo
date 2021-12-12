@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ot-harjoitustyo",
+  "private_key_id": "035eb11cf15a0eea19edfd489451d77ff2923e38",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDSk6wiimXcyNdo\nxZDGSxvuLdzm4qWPX3ytSI03KzA4ev0U2kBlZvPeF6BCOAFDstBgV99FQOVlaUyo\nAO4ndhbHHpANPhAcNWmkC1H/gHSxYEIWaK5pXlo9gIA/g1SzT+8lD3zOu6izETVS\nYMiqBiEzg2NxowtZH6r/W1TjHxKlfP1W24tn6v9BuZQUvr4v6SxaC5tHsP6Kk9KU\nwCuDLy2F7kDW6rRrUlsOc3b+eN7IFDnYWSoGIjB1v+ywt2/FExVtv1cpERZ56t2t\n4YO06Is3t6Jc9Rhn6pOtycYuqiHtP1Jbvh5CQq6a9/si27ZZHQYwS2Rq/JBcoiMR\n9tUO7wRxAgMBAAECgf8A8q1OtPMyA6pZNWzhstVqlJDvAgfDzKJKonNWHuzaroC+\nx+8OfO0nlq51zTTqQxfKRva8wBpuvWYshCL71By57h1E2NYZi4TvhZ8BBE5mD8bW\nSEKLGan16vm8D9TROjPFnB4uWm2dcoJoWh/5J6vf4uoHvKF7i7PdEGOu2Y5NIrh+\nUz/ac5DyV4/TONCzUGW0NRH2p/Bp9F2RYTkykNtzhpjP3UAZuRxoshYe+MWKzWgx\n2OZSe+a/cupRjzzydE8tbNkag8Um6VxU7VxOscIMYX21kBTP0LRuLwME71bg9iNB\ntjLmMaFK5hoz2n3bGb4vEfk102EWE0OTZ7BUrcECgYEA8jQzJFdaTF1fgQCiuZ2e\nbuT4hx6L6hUNysXGitURxrokrzqee/d1Y02niIrLaznY+jA9zco2cFsortaOt82h\nt8+BbbvMQaWaKe1MTCNf7klTT6+BY4WhiXNcPhJTcMuNO7VA1v1CU9HAkmUWlP4A\nbTZDvZWNIPiHUAObyCHKWdECgYEA3pJKANBd4XJlWu9mnj1lqeSp5G2sWN/2Rjvh\nheDvsaN9YOjQGmgZNjnBkAqgi+Zvnq284OG3M1240VKCNcaae5JITAGOeEKqqGXV\n3wY2MWe1m+zC0d0tcPNja2g3LLKRstQiC3unhXEavzMdxMoV59b7+PvyGsncHs3Z\np5d+CKECgYEA0LH11zyFjANwxWFc1X9hAsC8/QBvIrYdejlMSFgrxwahkXN7F+oz\n9er1jou5l5zyvzFOL8IrgkiqF2y88Nd4nz9nkLwe1fnximr0MS7R/CqmZKUfYjfE\n5wDF3J5B05ExEt+tDRKQUlUMD5iXCq6Kg5AccoEoZ95+CY3yb1HeX+ECgYEAtbkR\njQqTrFAfqxiOW6Lbj9RwVl6pekMaLAwWPZ4DdrF63BYaW4UlGJ4diUL0BGXYOuG1\ntpL0Zo8eKGJKiCeo2D3+o3gd39jmx+mlrpu+waXgpPextXH1+SPvx7FmYytFRJJp\nXaDPjWdkpDnTE2rAafOg9ZCYAwFPpSMDlA9fyyECgYAEvrUN0LvlQEt0g9RLHQhY\nbcFb/JOxSBJWuVeO5FpWGiSfE7QmI39ZUKsgNohnIfzq0zR8R3mjG2ZIkIwc0U5h\n0YhsgRYwl6q2LhVargyagVq3/zv56BokL2oJPIlP42UqvzG1EsvIycfx/63bX8pm\njExcjg+P7+CE5cU9GeE0qw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "otharjoitustyo@ot-harjoitustyo.iam.gserviceaccount.com",
+  "client_id": "102870486590232168871",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/otharjoitustyo%40ot-harjoitustyo.iam.gserviceaccount.com"
+}

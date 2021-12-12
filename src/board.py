@@ -43,7 +43,7 @@ class Square():
         self.pixels = pixels
         self.surf = pg.Surface((pixels, pixels))
         self.surf.fill("Grey")
-        self.rect = self.surf.get_rect(topleft=(j*pixels+j, i*pixels+i))
+        self.rect = self.surf.get_rect(topleft=(j*pixels+j, i*pixels+i+pixels))
         self.flagged = False
         self.visible = False
         self.value = 0
@@ -51,7 +51,7 @@ class Square():
     def update_rect(self, color):
         self.surf.fill(color)
         self.rect = self.surf.get_rect(
-            topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i))
+            topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i+self.pixels))
 
     def flag(self):
         if self.visible:
@@ -63,7 +63,7 @@ class Square():
             self.flagged = True
             self.surf.blit(pg.image.load("images/flag48.png"), (0, 0))
             self.rect = self.surf.get_rect(
-                topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i))
+                topleft=(self.j*self.pixels+self.j, self.i*self.pixels+self.i+self.pixels))
 
 
 class Board():
