@@ -13,6 +13,9 @@ https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/arkitekt
 ### Linkki releaseiin:
 https://github.com/AmnellEmil/ot-harjoitustyo/releases/tag/viikko5
 
+### Linkki käyttöohjeisiin:
+https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/K%C3%A4ytt%C3%B6ohje.md
+
 ## Asennus
 Riippuvuudet asennetaan komennolla:
 ```bash
