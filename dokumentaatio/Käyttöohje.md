@@ -33,4 +33,4 @@ Lopuksi voi painaa leaderboards nappia ja päästä pelin high score listalle, j
 
 Kun voittaa pelin, niin pelaajalla on mahdollisuus antaa nimensä ja lähettää aikansa google sheets leaderboardsille
 
-![](./kuvat/vicotry.png)
+![](./kuvat/victory.png)
