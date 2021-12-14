@@ -36,4 +36,5 @@ Minulla on käytössä googlen api sheetsille ja driveille. Tämän ja pygsheets
 
 ### Miinaharvapelin kentän generointi
 Kun uusi peli aloitetaan, niin satunnainen miinaharvakenttä generoidaan parametrien mukaan. Seuraava funktio edustaa kentää arrayna, jossa elementit ovat square olioita, jotka sisältävät kaiken relevantin tiedon ruudusta kuten sen arvon, jos en on paljastettu, tiedon graaffiesta esityksestä etc.
+
 ![](./kuvat/sekvenssikaavio.png)
