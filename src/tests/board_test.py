@@ -1,85 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Nov 23 19:44:13 2021
+Created on Tue Dec 14 06:44:20 2021
 
 @author: emil
 """
 import unittest
-import numpy as np
 import random
-from board import Minefield, Square, Board
-
-
-def check_surrounding_bombs(board, i, j):
-    number = board[i][j]
-    counter = 0
-    if number == -1:
-        return 1
-    for x in [i-1, i, i+1]:
-        for y in [j-1, j, j+1]:
-            if x < 0 or y < 0 or x == len(board) or y == len(board[0]):
-                continue
-            if board[x][y] == -1:
-                counter += 1
-    if counter == number:
-        return 1
-    return 0
-
+from board import Minefield, Board
 
 class TestBoard(unittest.TestCase):
     def setUp(self):
-        self.minefield = Minefield()
         self.board=Board(10,10,48,9)
-        self.square = Square(0, 0, 48)
-        
-    def test_minefield_init(self):
-        m = Minefield()
-        self.assertEqual(m.board, [])
-
-    def test_add_one_works(self):
-        self.minefield.board = np.zeros((5, 5), dtype=int)
-        self.minefield.add_one(1, 1)
-        self.assertEqual(self.minefield.board[1][1], 1)
-        self.minefield.board[0][0] = -1
-        self.assertEqual(self.minefield.add_one(0, 0), False)
-        self.assertEqual(self.minefield.add_one(-1, -1), False)
-        self.assertEqual(self.minefield.add_one(5, 5), False)
-        self.assertEqual(self.minefield.add_one(2, 5), False)
-        self.assertEqual(self.minefield.add_one(2, -1), False)
-
-    def test_check_surrounding_bombs_works(self):
-        board_false = np.array([[-1, -1], [-1, 2]])
-        board_true = np.array([[1, 1], [1, -1]])
-        self.assertEqual(check_surrounding_bombs(board_false, 1, 1), 0)
-        self.assertEqual(check_surrounding_bombs(board_true, 1, 1), 1)
-        self.assertEqual(check_surrounding_bombs(board_true, 0, 1), 1)
-
-    def test_generate_board_works(self):
-        self.minefield.generate_minefield(6, 6, 10)
-        valid_squares = 0
-        for i in range(self.minefield.board.shape[0]):
-            for j in range(self.minefield.board.shape[1]):
-                valid_squares += check_surrounding_bombs(
-                    self.minefield.board, i, j)
-        self.assertEqual(valid_squares, 6*6)
-
-    def test_Square_init(self):
-        s = Square(0, 0, 50)
-
-    def test_Square_update_rect(self):
-        self.square.update_rect("Red")
-        self.assertEqual(self.square.surf.get_size(), (48, 48))
-        
-    def test_Square_flag(self):
-        self.assertEqual(self.square.flagged,False)
-        self.square.flag()
-        self.assertEqual(self.square.flagged,True)
-        self.square.visible=True
-        self.assertEqual(self.square.flag(),None)
-
-    def test_Board_init(self):
-        b=Board(12,12,48,11)
         
     def test_Board_generate_board(self):
         random.seed(1)
@@ -90,4 +22,42 @@ class TestBoard(unittest.TestCase):
         for i in range(m.board.shape[0]):
             for j in range(m.board.shape[1]):
                 self.assertEqual(self.board.board[i][j].value,m.board[i][j])
-       
+                
+    def test_reveal(self):
+        random.seed(1)
+        board2=Board(3,3,48,2)
+        board2.generate_board()
+        board2.reveal(3,3)
+        for x in board2.board:
+            for y in x:
+                self.assertEqual(y.visible,False)
+        board2.reveal(0,0)
+        for i in range(3):
+            for j in range(3):
+                if i==0 and j==0:
+                    self.assertEqual(board2.board[i][j].visible,True)
+                else:
+                    self.assertEqual(board2.board[i][j].visible,False)
+        board2.reveal(2,2)
+        for i in range(3):
+            for j in range(3):        
+                    if i==0 and (j==1 or j==2):
+                        self.assertEqual(board2.board[i][j].visible,False)
+                    else:
+                        self.assertEqual(board2.board[i][j].visible,True)
+        board2.reveal(0,0)
+        for i in range(3):
+            for j in range(3):        
+                    if i==0 and (j==1 or j==2):
+                        self.assertEqual(board2.board[i][j].visible,False)
+                    else:
+                        self.assertEqual(board2.board[i][j].visible,True)
+        self.assertEqual(board2.reveal(0,1),-1)
+        
+    def test_lose(self):
+        board3=Board(6,6,48,8)
+        board3.generate_board()
+        board3.lose(0,0)
+        for x in board3.board:
+            for y in x:
+                self.assertEqual(y.visible,True)

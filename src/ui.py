@@ -19,7 +19,7 @@ clock = pg.time.Clock()
 screen = pg.display.set_mode((1024, 720), pg.RESIZABLE)
 screen.fill("Grey")
 pixels = 48
-font = pg.font.Font(None, pixels)
+font = pg.font.SysFont("Arial", pixels-15)
 pg.display.set_caption("Minesweeper")
 
 def draw_text(text, font, color, x, y,topleft):

@@ -12,5 +12,7 @@ Date,Hours,Comment
 7.12,1,Käyttöliittymän parantaminen
 11.12,3,Ajastin ja google API käyttöön
 12.12,3,High Scores sheets, tuloksien kirjaus google sheetsiin
+---- summa
+14.12,3,Tesiten kirjoittaminen,palautuksen valmisteleminen
 
 Summa: 33h

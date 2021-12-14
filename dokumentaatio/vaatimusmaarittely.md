@@ -14,7 +14,7 @@ Sovellus on miinaharavatyyppinen peli jota pelataan tietokoneella.
 - ruutujen liputtaminen ja klikkaaminen (tehty)
 
 ## Kiinostavia kehitysideoita
-- Ajastin pelille
-- Pommien tiheyden muuttaminen
+- Ajastin pelille (tehty)
 - Jokaisen pelin jokainen liike tallennetaan, jotta pelin päätyttyä sen voi katsoa läpi klikkaus kerrallaan.
-- Pisteytys systeemi joka riippuu jäljellä olevasta ajasta, kentän laajuudesta ja pommien tiheydestä
+- Pisteytys systeemi joka riippuu jäljellä olevasta ajasta, kentän laajuudesta ja pommien tiheydestä (en tule tekemään, koska aika riittää)
+- High score lista verkkoon, kun voittaa voi lähettää aikansa leaderboardsille (google sheets dokumenttiin) (viikolla 6 keksitty idea, tehty)
