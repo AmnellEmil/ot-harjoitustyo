@@ -11,10 +11,39 @@ import numpy as np
 
 
 class Minefield():
+    """ Luokka, jolla generoidaan miinaharavakenttä
+    
+    Attributes:
+        board: kentän arvojen representaatio np.array:na
+    """
     def __init__(self):
+        """
+        Konstruktori
+
+        Returns
+        -------
+        None.
+
+        """
         self.board = []
 
     def add_one(self, i, j):
+        """
+        Kasvattaa jonkun ruudun arvoa yhdellä
+
+        Parameters
+        ----------
+        i : 
+            rivi indeksi.
+        j : TYPE
+            sarake indeksi.
+
+        Returns
+        -------
+        bool
+            palauttaa True jos kasvattaminen onnistui.
+
+        """
         if i < 0 or j < 0 or i == self.board.shape[0] or j == self.board.shape[1]:
             return False
         if self.board[i][j] == -1:
@@ -23,6 +52,26 @@ class Minefield():
         return True
 
     def generate_minefield(self, rows, columns, nbombs):
+        """
+        Generoi satunnaisen miinaharavakentän
+        
+        -1 Viittaa pommiin
+
+        Parameters
+        ----------
+        rows : 
+            rivien määrä.
+        columns : TYPE
+            sarakkeiden määrä.
+        nbombs : TYPE
+            pommien määrä.
+
+        Returns
+        -------
+        np.array
+            generoitu kenttä.
+
+        """
         self.board = np.zeros((rows, columns), dtype=int)
         list_of_locations = [(i, j) for i in range(self.board.shape[0])
                              for j in range(self.board.shape[1])]

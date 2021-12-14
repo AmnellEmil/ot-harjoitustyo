@@ -14,5 +14,6 @@ Date,Hours,Comment
 12.12,3,High Scores sheets, tuloksien kirjaus google sheetsiin
 ---- summa
 14.12,3,Tesiten kirjoittaminen,palautuksen valmisteleminen
+14.12,3,Docstring ohje ja kaavio
 
 Summa: 33h

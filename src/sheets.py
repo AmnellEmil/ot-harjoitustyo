@@ -10,6 +10,27 @@ import pandas as pd
 import pygsheets
 
 def send_result_to_sheets(name,time,rows,columns,bombs):
+    """
+    Lähettää pelin tulokset google sheets high score listalle
+
+    Parameters
+    ----------
+    name : 
+        pelaajan nimi.
+    time : 
+        pelin aika.
+    rows : 
+        kentän rivien määrä.
+    columns : 
+        kentän sarakkeiden määrä.
+    bombs : 
+        pommien määrä
+
+    Returns
+    -------
+    None.
+
+    """
     gc=pygsheets.authorize(service_file="ot-harjoitustyo-035eb11cf15a.json")
     sh=gc.open("Ot-harjoitustyo High Scores")
     wks=sh[0]
