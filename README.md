@@ -10,8 +10,8 @@ https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/Ty%C3%B6
 ### Linkki arkitektuuriin:
 https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/arkitektuuri.md
 
-### Linkki releaseiin:
-https://github.com/AmnellEmil/ot-harjoitustyo/releases/tag/viikko5
+### Linkki releaseeihin:
+https://github.com/AmnellEmil/ot-harjoitustyo/releases
 
 ### Linkki käyttöohjeisiin:
 https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/K%C3%A4ytt%C3%B6ohje.md
