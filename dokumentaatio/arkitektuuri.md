@@ -32,7 +32,7 @@ Board olio on sovelluslogiikan master olio. Se sisältää kentän parametrit, p
 Minulla on käytössä googlen api sheetsille ja driveille. Tämän ja pygsheets pakkauksen avulla miinaharvapelin high score lista toteutuu
 
 
-## Päätoiminnalisuudet
+## Esimerrki yhdestä toiminnalisuudesta
 
 ### Miinaharvapelin kentän generointi
 Kun uusi peli aloitetaan, niin satunnainen miinaharvakenttä generoidaan parametrien mukaan. Seuraava kaavio näyttää miten Board olio generoi kentän.
