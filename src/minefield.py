@@ -12,10 +12,11 @@ import numpy as np
 
 class Minefield():
     """ Luokka, jolla generoidaan miinaharavakenttä
-    
+
     Attributes:
         board: kentän arvojen representaatio np.array:na
     """
+
     def __init__(self):
         """
         Konstruktori
@@ -33,9 +34,9 @@ class Minefield():
 
         Parameters
         ----------
-        i : 
+        i :
             rivi indeksi.
-        j : TYPE
+        j :
             sarake indeksi.
 
         Returns
@@ -54,16 +55,16 @@ class Minefield():
     def generate_minefield(self, rows, columns, nbombs):
         """
         Generoi satunnaisen miinaharavakentän
-        
+
         -1 Viittaa pommiin
 
         Parameters
         ----------
-        rows : 
+        rows :
             rivien määrä.
-        columns : TYPE
+        columns :
             sarakkeiden määrä.
-        nbombs : TYPE
+        nbombs :
             pommien määrä.
 
         Returns
@@ -76,10 +77,10 @@ class Minefield():
         list_of_locations = [(i, j) for i in range(self.board.shape[0])
                              for j in range(self.board.shape[1])]
         bomb_locations = random.sample(list_of_locations, nbombs)
-        for x in bomb_locations:
-            a, b = x
-            self.board[a][b] = -1
-            for i in [a-1, a, a+1]:
-                for j in [b-1, b, b+1]:
+        for place in bomb_locations:
+            aaa, bbb = place
+            self.board[aaa][bbb] = -1
+            for i in [aaa-1, aaa, aaa+1]:
+                for j in [bbb-1, bbb, bbb+1]:
                     self.add_one(i, j)
         return self.board

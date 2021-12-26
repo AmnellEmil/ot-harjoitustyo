@@ -25,10 +25,11 @@ def check_surrounding_bombs(board, i, j):
         return 1
     return 0
 
+
 class TestBoard(unittest.TestCase):
     def setUp(self):
         self.minefield = Minefield()
-        
+
     def test_minefield_init(self):
         m = Minefield()
         self.assertEqual(m.board, [])

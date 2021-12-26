@@ -7,40 +7,42 @@ Created on Tue Dec 14 06:39:34 2021
 """
 import pygame as pg
 
+
 class Square():
     """
     Luokka, joka sisältää kaiken tärkeän tiedon pelin kentän ruudusta
 
     Attributes
     ----------
-    i : 
+    i :
         ruudun riviindeksi.
-    j : 
+    j :
         ruudun sarakeindeksi.
-    pixels : 
+    pixels :
         ruudun sivun pituus pixeleissä.
-    surf : 
+    surf :
         pg.Surface olio, sisältää tiedon ruudun graaffisesta esittelystä.
-    rect : 
+    rect :
         pg.Rect olio, sisältää tiedon ruudun paikasta tietokoneruudulla
-    visible : 
+    visible :
         totuusarvo joka kertoo onko ruutu paljastettu.
-    flagged : 
+    flagged :
         totuusarvo joka kertoo onko ruutu liputettu.
-    value : 
+    value :
         ruudun arvo, vieressä olevien pommien määrä
     """
+
     def __init__(self, i, j, pixels):
         """
         Konstruktori
 
         Parameters
         ----------
-        i : 
+        i :
             ruudun riviindeksi.
-        j : 
+        j :
             ruudun sarakeindeksi.
-        pixels : 
+        pixels :
             ruudun sivun pituus pixeleissä.
 
         Returns
@@ -64,7 +66,7 @@ class Square():
 
         Parameters
         ----------
-        color : 
+        color :
             väri, jolla ruutu väritetään.
 
         Returns

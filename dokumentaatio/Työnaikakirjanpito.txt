@@ -15,5 +15,6 @@ Date,Hours,Comment
 ---- summa
 14.12,3,Tesiten kirjoittaminen,palautuksen valmisteleminen
 14.12,3,Docstring ohje ja kaavio
+26.12,2, Viimeistelyt palautusta varten
 
-Summa: 33h
+Summa: 41h

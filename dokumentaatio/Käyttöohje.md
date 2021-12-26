@@ -21,7 +21,7 @@ Tästä näkymästä voi siirtyä play napin kautta näkymään, jossa valitaan 
 
 ![](./kuvat/play.png)
 
-Kun on valinnut dimensiot miinaharvapeli aloitetaan start napilla.
+Kun on valinnut dimensiot miinaharvapeli aloitetaan start napilla. Peli avautuu uuteen ikkunaan.
 
 Menu näkymästä pääsee myös näkymään, jossa kerrotaan pelin säätimet
 
