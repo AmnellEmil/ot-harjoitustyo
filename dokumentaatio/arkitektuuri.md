@@ -38,3 +38,8 @@ Minulla on käytössä googlen api sheetsille ja driveille. Tämän ja pygsheets
 Kun uusi peli aloitetaan, niin satunnainen miinaharvakenttä generoidaan parametrien mukaan. Seuraava kaavio näyttää miten Board olio generoi kentän.
 
 ![](./kuvat/sekvenssikaavio.png)
+
+### Ruudun klikkaaminen
+Kun klikataan ruutua, niin board olion metodi reveal paljastaa eri määrän ruutuja riippuen siitä mikä arvo klikatulla ruudulla on. Metodi palauttaa klikatun ruudun arvon. Juuri tämän jälkeen pelin koodissa tarkastetaan, jos klikattu ruutu oli pommi, eli palautettu arvo oli -1. Jos näin on, niin board olion lose metodi ajetaan.
+
+![](./kuvat/reveal.png)
