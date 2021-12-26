@@ -1,10 +1,10 @@
 # Arkkitehtuurikuvaus
 
 # Rakenne
-Pakkausrakenne on seuraava:
+Rakenne on seuraava:
 - ui sisältää game loopin ja käyttöliittymään liittyviä asioita
-- logic sisältää sovelluslogiikan, eli luokat Minefield, Square ja Board
-- sheets_api sisältää yhteyden google sheetsiin ja funktion jolla tulokset lähetetään sinne
+- luokat Minefield, Square ja Board sisältävät sovelluslogiikan
+- sheets sisältää yhteyden google sheetsiin ja funktion jolla tulokset lähetetään sinne
 
 ## Käyttöliittymä
 Käyttöliittymä sisältää 4 erilaista näkymää:
