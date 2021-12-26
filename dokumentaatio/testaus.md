@@ -8,7 +8,7 @@ Sovelluslogiikan luokat Minefield, Square ja Board ovat testattu unittestin auto
 Testit testaavat sovelluslogiikkaa perusteellisesti.
 
 ### Muu
-Käyttöliittymälle ja sheets.py tiedostolle ei ole automatisoitua testausta.
+Käyttöliittymälle ja pelin tuloksien lähetykselle google sheetsiin toiminnolle ei ole automatisoitua testausta.
 
 ### Testikattavuus
 Haaraumakattavuus on 100%. Kaikille metodeille on testi, joka testaa jotain mielekästä.
