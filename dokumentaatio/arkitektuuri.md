@@ -24,7 +24,7 @@ Minefield luokan ainoa tehtävä on generoida oikean kokoinen satunnainen miihar
 
 Square oliot sisältävät kaiken relevantin tiedon pelin ruudusta kuten sen arvon, jos en on paljastettu, tiedon graaffiesta esityksestä etc. Square olio toimii siltana käyttöliittymän ja sovelluslogiikan välillä.
 
-Board olio on sovelluslogiikan master olio. Se sisältää kentän parametrin, pelin ruudut (Square oliot) ja kaikki sovelluslogiikan funktiot, jotka tarvitaan kun pelaaja klikkaa asioita käyttöliittymässä miinaharavapelin gameloopissa.
+Board olio on sovelluslogiikan master olio. Se sisältää kentän parametrit, pelin ruudut (Square oliot) ja kaikki sovelluslogiikan funktiot, jotka tarvitaan kun pelaaja klikkaa asioita käyttöliittymässä miinaharavapelin gameloopissa.
 
 ![alt text](https://yuml.me/75b3b04d.png)
 
