@@ -1,10 +1,10 @@
 # Arkkitehtuurikuvaus
 
 # Rakenne
-Pakkausrakenne on seuraava:
+Rakenne on seuraava:
 - ui sisältää game loopin ja käyttöliittymään liittyviä asioita
-- logic sisältää sovelluslogiikan, eli luokat Minefield, Square ja Board
-- sheets_api sisältää yhteyden google sheetsiin ja funktion jolla tulokset lähetetään sinne
+- luokat Minefield, Square ja Board sisältävät sovelluslogiikan
+- sheets sisältää yhteyden google sheetsiin ja funktion jolla tulokset lähetetään sinne
 
 ## Käyttöliittymä
 Käyttöliittymä sisältää 4 erilaista näkymää:
@@ -24,7 +24,7 @@ Minefield luokan ainoa tehtävä on generoida oikean kokoinen satunnainen miihar
 
 Square oliot sisältävät kaiken relevantin tiedon pelin ruudusta kuten sen arvon, jos en on paljastettu, tiedon graaffiesta esityksestä etc. Square olio toimii siltana käyttöliittymän ja sovelluslogiikan välillä.
 
-Board olio on sovelluslogiikan master olio. Se sisältää kentän parametrin, pelin ruudut (Square oliot) ja kaikki sovelluslogiikan funktiot, jotka tarvitaan kun pelaaja klikkaa asioita käyttöliittymässä miinaharavapelin gameloopissa.
+Board olio on sovelluslogiikan master olio. Se sisältää kentän parametrit, pelin ruudut (Square oliot) ja kaikki sovelluslogiikan funktiot, jotka tarvitaan kun pelaaja klikkaa asioita käyttöliittymässä miinaharavapelin gameloopissa.
 
 ![alt text](https://yuml.me/75b3b04d.png)
 
@@ -32,7 +32,7 @@ Board olio on sovelluslogiikan master olio. Se sisältää kentän parametrin, p
 Minulla on käytössä googlen api sheetsille ja driveille. Tämän ja pygsheets pakkauksen avulla miinaharvapelin high score lista toteutuu
 
 
-## Päätoiminnalisuudet
+## Esimerrki yhdestä toiminnalisuudesta
 
 ### Miinaharvapelin kentän generointi
 Kun uusi peli aloitetaan, niin satunnainen miinaharvakenttä generoidaan parametrien mukaan. Seuraava kaavio näyttää miten Board olio generoi kentän.

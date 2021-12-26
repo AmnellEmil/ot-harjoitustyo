@@ -16,6 +16,9 @@ https://github.com/AmnellEmil/ot-harjoitustyo/releases
 ### Linkki käyttöohjeisiin:
 https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/K%C3%A4ytt%C3%B6ohje.md
 
+### Linkki testausdokumenttiin:
+https://github.com/AmnellEmil/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md
+
 ## Asennus
 Riippuvuudet asennetaan komennolla:
 ```bash
