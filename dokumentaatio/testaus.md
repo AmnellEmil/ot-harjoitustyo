@@ -1,7 +1,7 @@
 # Testikattavuus
-Ohjelmaa on testattu unittestin avulla
 
 ## Yksikkö- ja integraatiotestaus
+Ohjelmaa on testattu unittestin avulla
 
 ### Sovelluslogiikka
 Sovelluslogiikan luokat Minefield, Square ja Board ovat testattu unittestin automatisoitujen testien avulla. Testit tarkistavat, että luokat ja niiden metodit toimivat kuten pitäisivät. Koska miinaharavakentät ovat satunnaiset, niin testauksessa käytetään random paketin random.seed() funktiota, jotta saadaan aina samanlainen kenttä testejä varten. Tällä varmistetaan, että sovelluslogiikka varsinkin toimii koska testit eivät mene läpi tuurilla.
